@@ -7,15 +7,18 @@ categories: post
 
 Olá pessoa!
 
+
 Este é um post simples e aborda a instalação básica e direta, no linux (Debian), vamos lá.
 
 Atualize as dependências do sistema operacional:
+
 ```
 sudo apt update
 sudo apt upgrade
 ```
 
 Preparando a instalação (__execute uma linha por vez__):
+
 ```
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
@@ -25,11 +28,13 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 ```
 
 Instalando a versão 9.6, altere-a se desejar. O _pgadmin3_ é uma plataforma Open Source de administração e desenvolvimento para PostgreSQL, possui uma interface gráfica para administrar as databases e SQL queries.
+
 ```
 sudo apt -y update && sudo apt -y install postgresql-9.6 pgadmin3
 ```
 
 Verificando a instalação:
+
 ```
 dennis@Jehuty:~$ ps -fu postgres
 UID        PID  PPID  C STIME TTY          TIME CMD
@@ -42,8 +47,10 @@ postgres 32132 32126  0 18:54 ?        00:00:00 postgres: 9.6/main: stats collec
 ```
 
 Para desinstalar e remover completamente o PostgreSQL, rode a instrução abaixo;
+
 ```
 sudo apt remove --purge postgresql*
 ```
+
 
 Até a próxima.
